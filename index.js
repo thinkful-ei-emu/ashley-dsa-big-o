@@ -9,64 +9,64 @@
 
 //Question 2
 
-// function isEven(value) {
-//   if (value % 2 == 0) {
-//       return true;
-//   }
-//   else
-//       return false;
-//   }
-// }
+function isEven(value) {
+  if (value % 2 == 0) {
+      return true;
+  }
+  else
+      return false;
+  }
+}
 
 //Answer: O(1) because no matter size of input value 
 //the algorithm will take the same amout of time to complete
 
 //Question 3
-// function areYouHere(arr1, arr2) {
-//     for (let i = 0; i < arr1.length; i++) {
-//       const el1 = arr1[i];
-//       for (let j = 0; j < arr2.length; j++) {
-//           const el2 = arr2[j];
-//           if (el1 === el2) return true;
-//       }
-//   }
-//   return false;
-// }
+function areYouHere(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    const el1 = arr1[i];
+    for (let j = 0; j < arr2.length; j++) {
+      const el2 = arr2[j];
+      if (el1 === el2) return true;
+    }
+  }
+  return false;
+}
 
 //Answer: O(n^k) because it is a nested loop 
 //where it requries 2 levels of looping over input
 
 // Question 4
-// function doubleArrayValues(array) {
-//   for (let i = 0; i < array.length; i++) {
-//       array[i] *= 2;
-//   }
-//   return array;
-// }
+function doubleArrayValues(array) {
+  for (let i = 0; i < array.length; i++) {
+    array[i] *= 2;
+  }
+  return array;
+}
 
 //Answer: O(n) because run time is directly porportional to size (n), 
 //larger array will take longer
 
 //Question 5
-// function naiveSearch(array, item) {
-//   for (let i = 0; i < array.length; i++) {
-//       if (array[i] === item) {
-//           return i;
-//       }
-//   }
-// }
+function naiveSearch(array, item) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === item) {
+      return i;
+    }
+  }
+}
 
 //Answer: O(n) because run time is directly porportional to size (n), 
 //larger array will take longer
 
 // Question 6
-// function createPairs(arr) {
-//   for (let i = 0; i < arr.length; i++) {
-//       for(let j = i + 1; j < arr.length; j++) {
-//           console.log(arr[i] + ", " +  arr[j] );
-//       }
-//   }
-// }
+function createPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      console.log(arr[i] + ", " + arr[j]);
+    }
+  }
+}
 
 //Answer: O(n^k) because it is a nested loop 
 //where it requries 2 levels of looping over input
@@ -137,3 +137,26 @@ function efficientSearch(array, item) {
 //this logic will continue until it finds the input as the middle number
 //Runtime Complexity: O(log(n))
 //larger the input, the longer time it takes but because the problem size is cut in half each round, running time increases slowly
+
+//Question 9
+function findRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+//finding a number in an array by mulitplying array length with random number between 0-1
+//Runtime Complexity: O(1)
+//no matter lenght of array input,  the algorithm will take the same amount of time to complete. 
+
+//Question 10
+function isWhat(n) {
+  if (n < 2 || n % 1 != 0) {
+      return false;
+  }
+  for (let i = 2; i < n; ++i) {
+      if (n % i == 0) return false;
+  }
+  return true;
+}
+//check if n is divisible by i
+//Runtime complexitiy: O(n)
+//because run time is directly porportional to size (n), 
+//larger n will take longer than a smaller 
